@@ -3,23 +3,25 @@ kind: Deployment
 metadata:
  name: frontend-deployment
  labels:
-   type: web
-   app: frontend
+  type: web
+  app: frontend
 spec:
  selector:
    matchLabels:
     type: web
     app: frontend
- replicas: 2
+ replicas: 1
  template:
    metadata:
      labels:
-       type: web
-       app: frontend
+      type: web
+      app: frontend
+      version: v11
    spec:
     containers:
-    - name: container
+    - name: frontend
       image: lllth94/frontend:latest
+      envFrom:
       ports:
       - containerPort: 80
       resources:
