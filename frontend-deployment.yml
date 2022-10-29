@@ -10,6 +10,7 @@ spec:
    matchLabels:
     type: web
     app: frontend
+    labels: v11
  replicas: 1
  template:
    metadata:
