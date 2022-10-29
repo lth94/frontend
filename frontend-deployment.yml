@@ -5,6 +5,7 @@ metadata:
  labels:
   type: web
   app: frontend
+  version: v11
 spec:
  selector:
    matchLabels:
